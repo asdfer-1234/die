@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class DieHandler : MonoBehaviour
 {
+	// private라고 언더바를 붙이시네 나는 안해야지
 	private DieObject diePrefab;
 	private Vector2 originPosition;
 	private CustomGrid grid;
@@ -28,10 +29,10 @@ public class DieHandler : MonoBehaviour
 
 	public DieObject SpawnDieInRandomPosition(){
 		if(grid.IsGridFull()){
-			Debug.LogError("Board is full.");
-			return null;
+			throw new Exception("Wha- The Board is full! What did you thought it was gonna happen? Thank god i made this message that prevents an eternal labor")
 		}
 		Vector2Int position;
+		// 😏
 		while(true){
 			position = new Vector2Int(Random.Range(0, CustomGrid.size.x), Random.Range(0, CustomGrid.size.y));
 			if(!grid.ObjectExists(position)){

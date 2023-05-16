@@ -8,6 +8,7 @@ public class EnemyBase : MonoBehaviour{
 
 
 	void Start(){
+		// 나는 게임핸들러 이거 찾고 아래 함수로 그냥 바로 오브젝트 찾아서 씀. 알아서 수정하시길
 		pathHandler = GameObject.FindGameObjectWithTag("Game Handler").GetComponent<PathHandler>();
 		gameHandler = GameObject.FindGameObjectWithTag("Game Handler").GetComponent<GameHandler>();
 	}
