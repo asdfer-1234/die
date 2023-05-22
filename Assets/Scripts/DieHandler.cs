@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
+using Random = UnityEngine.Random;
 
 public class DieHandler : MonoBehaviour
 {
@@ -29,7 +31,7 @@ public class DieHandler : MonoBehaviour
 
 	public DieObject SpawnDieInRandomPosition(){
 		if(grid.IsGridFull()){
-			throw new Exception("Wha- The Board is full! What did you thought it was gonna happen? Thank god i made this message that prevents an eternal labor")
+			throw new Exception("Wha- The Board is full! What did you thought it was gonna happen? Thank god i made this message that prevents an eternal labor");
 		}
 		Vector2Int position;
 		// 😏
