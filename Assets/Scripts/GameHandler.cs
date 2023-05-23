@@ -9,9 +9,24 @@ public class GameHandler : MonoBehaviour{
 	private bool spawnable = true;
 	public float interval;
 
+	public EnemyBase firstEnemy{
+		get{
+			EnemyBase first = null;
+			foreach(GameObject i in GameObject.FindGameObjectsWithTag("Enemy")){
+				EnemyBase enemy = i.GetComponent<EnemyBase>();
+				if(first == null || first.progress < enemy.progress){
+					first = enemy;
+				}
+			}
+			return first;
+		}
+	}
+
 	void Start(){
 		enemy = Resources.Load<EnemyBase>("Enemy/Enemy");
 	}
+
+
 
 	void Update(){
 		if(spawnable){

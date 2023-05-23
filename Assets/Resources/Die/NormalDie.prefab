@@ -184,6 +184,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rank: 0
+  bullet: {fileID: 6922373866333324097, guid: 02322c7e89af7b25287adba712f72ef7, type: 3}
+  interval: 0.1
 --- !u!58 &8624988587463799938
 CircleCollider2D:
   m_ObjectHideFlags: 0

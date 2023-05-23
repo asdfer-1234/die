@@ -6,7 +6,7 @@ using System;
 public class CustomGrid
 {
 	// Vector2Int쓰면 이제 xy값 정수로 한다고 분리할 필요 없다 함 써봐라
-	public static readonly Vector2Int size = new Vector2Int(10, 10);
+	public static readonly Vector2Int size = new Vector2Int(5, 3);
 	// 프로퍼티 이렇게 만들어두면 cellCount를 불러올때마다 함수를 호출한다 이거 좋음
 	public static int cellCount => size.x * size.y;
 	public static readonly float cellSize = 1.2f;
