@@ -7,13 +7,13 @@ using Random = UnityEngine.Random;
 public class DieHandler : MonoBehaviour
 {
 	// private라고 언더바를 붙이시네 나는 안해야지
-	private DieObject diePrefab;
+	private DieObject[] diePrefabs;
 	private Vector2 originPosition;
 	private CustomGrid grid;
 
 	void Start(){
 		originPosition = Vector2.zero;
-		diePrefab = Resources.Load<DieObject>("Die/Die");
+		diePrefabs = Resources.LoadAll<DieObject>("Die/");
 		grid = new CustomGrid();
 	}
 
@@ -23,8 +23,12 @@ public class DieHandler : MonoBehaviour
 		}
 	}
 
+	public DieObject GetRandomDie(){
+		return diePrefabs[Random.Range(0, diePrefabs.Length)];
+	}
+
 	public DieObject SpawnDie(Vector2Int position){
-		DieObject instantiated = Instantiate(diePrefab, CustomGrid.GridToWorldPoint(position, originPosition), Quaternion.identity);
+		DieObject instantiated = Instantiate(GetRandomDie(), CustomGrid.GridToWorldPoint(position, originPosition), Quaternion.identity);
 		grid.SetObject(position, instantiated);
 		return instantiated;
 	}

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DieObject : MonoBehaviour
+public abstract class DieObject : MonoBehaviour
 {
-	// 언젠간 완성이 되겄지
+	public int rank = 0; // Darn it, Man, Unity was built with public variables. Just use one!
 }

@@ -94,10 +94,10 @@ GameObject:
   m_Component:
   - component: {fileID: 3622678091847975508}
   - component: {fileID: 3622678091847975507}
-  - component: {fileID: 2946977044241010811}
-  - component: {fileID: 1271978747692428743}
+  - component: {fileID: -6851107159399193515}
+  - component: {fileID: -1470659078779395925}
   m_Layer: 0
-  m_Name: Die
+  m_Name: FireDie
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -161,7 +161,7 @@ SpriteRenderer:
   m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 4f233da65bcbed8b891f6fa7881a7c82, type: 3}
-  m_Color: {r: 1, g: 0.5577532, b: 0.10849059, a: 1}
+  m_Color: {r: 1, g: 0.23227616, b: 0.109803915, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -171,7 +171,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &2946977044241010811
+--- !u!114 &-6851107159399193515
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -184,7 +184,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rank: 0
---- !u!58 &1271978747692428743
+--- !u!58 &-1470659078779395925
 CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
