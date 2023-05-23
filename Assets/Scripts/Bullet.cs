@@ -8,9 +8,14 @@ public class Bullet : MonoBehaviour{
 	public int damage;
 	public float speed;
 	private Vector2 direction;
+	public float lifetime;
 
 	public void Fly(Vector2 target){
 		direction = (target - (Vector2)transform.position).normalized * speed;
+	}
+
+	void Start(){
+		StartCoroutine(Decay());
 	}
 	void Update(){
 		transform.Translate(direction * Time.deltaTime);
@@ -22,5 +27,10 @@ public class Bullet : MonoBehaviour{
 			enemy.health -= damage;
 			Destroy(gameObject);
 		}
+	}
+
+	private IEnumerator Decay(){
+		yield return new WaitForSeconds(lifetime);
+		Destroy(gameObject);
 	}
 }
